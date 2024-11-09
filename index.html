@@ -4,103 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda Pablo y Kenia</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Menú de navegación -->
-    <nav id="navbar">
-        <div class="menu-container">
-            <div class="menu-icon" id="menu-icon">
-                &#9776; <!-- Ícono de hamburguesa -->
+    <div class="container">
+        <!-- Menú de navegación -->
+        <nav id="navbar">
+            <div class="menu-container">
+                <div class="menu-icon" id="menu-icon">
+                    &#9776; <!-- Ícono de hamburguesa -->
+                </div>
+                <div class="page-title">
+                    Boda Pablo y Kenia
+                </div>
             </div>
-            <div class="page-title">
-                Boda Pablo y Kenia
+            <ul id="menu">
+                <span class="close-icon" id="close-icon">&times;</span> <!-- Ícono de cerrar -->
+                <li><a href="#bienvenida">Inicio</a></li>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#itinerario">Itinerario</a></li>
+                <li><a href="#alojamiento">Alojamiento</a></li>
+                <li><a href="#confirmacion">Confirmación</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección de Introducción -->
+        <section id="intro" class="section">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h1>Kenia <br> y <br> Pablo</h1>
+                    <p>Nuestro <em>pa' toda la vida</em></p>
+                </div>
             </div>
-        </div>
-        <ul id="menu">
-            <span class="close-icon" id="close-icon">&times;</span> <!-- Ícono de cerrar -->
-            <li><a href="#bienvenida">Inicio</a></li>
-            <li><a href="#informacion">Información</a></li>
-            <li><a href="#itinerario">Itinerario</a></li>
-            <li><a href="#alojamiento">Alojamiento</a></li>
-            <li><a href="#confirmacion">Confirmación</a></li>
-            <li><a href="#faq">FAQ</a></li>
-        </ul>
-    </nav>
+            <a href="#confirmacion" class="confirm-button">CONFIRMA AQUÍ</a>
+        </section>
+        
 
-    <!-- Sección de Bienvenida -->
-    <section id="bienvenida" class="section">
-        <h2>Bienvenidos a Nuestra Boda</h2>
-        <p>
-            Después de muuuuchos años juntos, hemos decidido darnos el sí más importante de nuestras vidas.
-            ¡Y para que este capítulo sea perfecto, tenéis que estar todos vosotros!
-        </p>
-        <p>
-            Nada nos haría más ilusión que celebrar nuestro amor rodeados de las personas que más queremos
-            y que todos podamos disfrutar, reír, llorar, comer bien y bailar hasta el amanecer.
-        </p>
-    </section>
+        <!-- Sección de Bienvenida -->
+        <section id="bienvenida" class="section">
+            <div class="bienvenida-content">
+                <div class="bienvenida-image">
+                    <img src="assets/pabloykenia.jpg">
+                </div>
+                <div class="bienvenida-text">
+                    <p class="greeting">Querida familia y amigos:</p>
+                    <p class="message">
+                        Después de muuuuchos años juntos, hemos decidido darnos el 
+                        <em>sí</em> más importante de nuestras vidas. 
+                        <strong>¡Y para que este capítulo sea perfecto, tenéis que estar todos vosotros!</strong>
+                    </p>
+                    <p>
+                        Nada nos haría más ilusión que celebrar nuestro amor rodeados 
+                        de las personas que más queremos y que todos podamos disfrutar, 
+                        reír, llorar, comer bien y bailar hasta el amanecer.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sección de Información del Evento -->
-    <section id="informacion" class="section">
-        <h2>Información del Evento</h2>
-        <p><strong>Cuándo:</strong> Sábado 6 de septiembre de 2025</p>
-        <p><strong>Dónde:</strong> Los Confites Organic Farm, Jarandilla de la Vera</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.838364754643!2d-5.630262423609826!3d40.10131657477552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3fc9fbe9899e63%3A0x67ea730abc3af66c!2sLos%20Confites%20Organic%20Farm!5e0!3m2!1ses!2ses!4v1726437254419!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p><a href="https://maps.app.goo.gl/hmBkdvaEs1Ck36fU9" target="_blank">Ver en Google Maps</a></p>
-    </section>
+        <!-- Sección de Información del Evento -->
+        <section id="informacion" class="section">
+            <div class="informacion-content">
+                <div class="informacion-image">
+                    <img src="assets/flores-informacion.png" alt="Flores decorativas" width="200%">
+                </div>
+                <div class="informacion-details">
+                    <h2>Primero, lo más importante:</h2>
+                    <p>
+                        <span class="subtitulo">Cuándo</span><br>
+                        <span class="fecha">Sábado 6 de septiembre de 2025</span>
+                    </p>
+                    <p>
+                        <span class="subtitulo">Dónde</span><br>
+                        <span class="ubicacion">Los Confites Organic Farm<br>Jarandilla de la Vera</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.838364754643!2d-5.630262423609826!3d40.10131657477552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3fc9fbe9899e63%3A0x67ea730abc3af66c!2sLos%20Confites%20Organic%20Farm!5e0!3m2!1ses!2ses!4v1726437254419!5m2!1ses!2ses" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p class="abrir-maps">
+                <a href="https://maps.app.goo.gl/hmBkdvaEs1Ck36fU9" target="_blank">Abrir en Google Maps</a>
+            </p>
+        </section>
+        
 
-    <!-- Sección del Itinerario del Día -->
-    <section id="itinerario" class="section">
-        <h2>Itinerario del Día</h2>
-        <ul>
-            <li><strong>Bus de ida desde Jarandilla:</strong> 18:15h</li>
-            <li><strong>Inicio de la ceremonia:</strong> 19:00h</li>
-            <li><strong>Cóctel, cena y música:</strong> Desde las 20:00h</li>
-            <li><strong>Primer bus de vuelta a Jarandilla:</strong> Medianoche</li>
-            <li><strong>Segundo bus de vuelta a Jarandilla:</strong> Fin de fiesta</li>
-        </ul>
-    </section>
+        <!-- Sección del Itinerario del Día -->
+        <section id="itinerario" class="section">
+            <h2>Itinerario</h2>
+            <p><strong>Bus de ida desde Jarandilla:</strong><br> 18:15h.</p>
+            <p><strong>Inicio de la ceremonia:</strong><br> 19h.</p>
+            <p><strong>Cóctel, cena (y buena música...):</strong><br> a partir de las 20h.</p>
+            <p><strong>Primer bus de vuelta a Jarandilla:</strong><br> sobre la 01:00h.</p>
+            <p><strong>Segundo bus de vuelta a Jarandilla:</strong><br> cuando termine la fiesta.</p>
+        </section>
 
-    <!-- Sección de Alojamiento -->
-    <section id="alojamiento" class="section">
-        <h2>Opciones de Alojamiento</h2>
-        <p>Aquí hay algunas opciones de alojamiento. Al reservar, menciona que asistirás a la boda en Los Confites:</p>
-        <ul>
-            <li><a href="https://www.parador.es/es/paradores/parador-de-jarandilla-de-la-vera" target="_blank">Parador de Jarandilla</a></li>
-            <li><a href="https://www.qdelac.com/quintadelacerca" target="_blank">Quinta de la Cerca</a></li>
-            <li><a href="https://laverarutaimperialhotel.es/" target="_blank">Hotel Ruta Imperial</a></li>
-            <li><a href="https://www.vaqueriacantaelgallo.com" target="_blank">Vaquería Cantaelgallo</a></li>
-            <li><a href="https://www.fincalacoronilla.com" target="_blank">Finca la Coronilla</a></li>
-            <li><a href="https://www.booking.com/hotel/es/rural-san-giles.html" target="_blank">Hotel Rural San Giles</a></li>
-            <li><a href="https://www.booking.com/hotel/es/nabia.es.html" target="_blank">Hotel Nabia</a></li>
-            <li><a href="https://quintasancayetano.com/" target="_blank">Quinta San Cayetano</a></li>
-            <li><a href="https://www.casaelzorzal.com/" target="_blank">Casa el Zorzal</a></li>
-        </ul>
-    </section>
+        <!-- Sección de Alojamiento -->
+        <section id="alojamiento" class="section">
+            <h2>Dónde dormir</h2>
+            <p>Recomendamos que, por cercanía, busquéis alojamiento en <strong>Jarandilla de la Vera</strong>, que cuenta con muchas opciones. Por aquí os dejamos algunos sitios que tienen convenio con Los Confites para que, a la hora de reservar, podáis comentar que <span class="boda-subrayado">asistiréis allí a una boda:</span></p>
+            <ul class="alojamiento-list">
+                <li><a href="https://www.parador.es/es/paradores/parador-de-jarandilla-de-la-vera" target="_blank">Parador de Jarandilla</a></li>
+                <li><a href="https://www.qdelac.com/quintadelacerca" target="_blank">Quinta de la Cerca</a></li>
+                <li><a href="https://laverarutaimperialhotel.es/" target="_blank">Hotel Ruta Imperial</a></li>
+                <li><a href="https://www.vaqueriacantaelgallo.com" target="_blank">Vaquería Cantaelgallo</a></li>
+                <li><a href="https://www.fincalacoronilla.com" target="_blank">Finca la Coronilla</a></li>
+                <li><a href="https://www.booking.com/hotel/es/rural-san-giles.html" target="_blank">Hotel Rural San Giles</a></li>
+                <li><a href="https://www.booking.com/hotel/es/nabia.es.html" target="_blank">Hotel Nabia</a></li>
+                <li><a href="https://quintasancayetano.com/" target="_blank">Quinta San Cayetano</a></li>
+                <li><a href="https://www.casaelzorzal.com/" target="_blank">Casa el Zorzal</a></li>
+            </ul>
+            <p>También está la opción de buscar alojamiento en Jaraíz de la Vera y cercanías. Por supuesto, si tenéis cualquier problema, no dudéis en avisarnos.</p>
+        </section>
+        
+        <section id="faq" class="section">
+            <h2>Otras preguntas</h2>
+            <div class="faq-content">
+                <div class="faq-item">
+                    <p><strong>¿Hay dress code?</strong><br> 
+                    <span class="faq-answer">Que cada uno vista como quiera y se sienta cómodo. Eso sí, al ser una boda en el campo, por vuestra comodidad recomendamos que, en caso de llevar tacones, sean más bien bajos, de tacón cuadrado o tipo cuña. Además, es una buena opción que podáis traer unos zapatos planos para cambiarlos, al igual que llevar alguna cosita de abrigo por si refresca por la noche. Recordad que hay que darlo todo hasta el final :)</span></p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>¿Toda la boda será en el mismo sitio?</strong><br> 
+                    <span class="faq-answer">Sí, teníamos claro que queríamos celebrar nuestro gran día en el campo, rodeados del paisaje de La Vera y nuestra preciosa sierra. Además, la idea es que todo sea fluido y podamos estar juntos el mayor tiempo posible. Esperamos que sea un día inolvidable y que podáis disfrutar de cada detalle con nosotros.</span></p>
+                </div>
+                <div class="faq-item">
+                    <p><strong>¿Hay sitio para aparcar?</strong><br> 
+                    <span class="faq-answer">Sí, hay sitio para aparcar al principio de la finca. Si lo preferís, podéis llevar coche, pero recordad que contamos con servicio de autobuses desde Jaraíz y Jarandilla.</span></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Confirmación y Cuenta Bancaria -->
+        <section id="confirmacion-detalle" class="section">
+            <div class="detalle-content">
+                <div class="detalle-texto">
+                    <p>Para todos aquellos que queráis tener un detalle con nosotros, podéis hacerlo a través de esta cuenta. ¡Lo apreciamos muchísimo!</p>
+                    <p class="cuenta">ES93 0049 0223 6828 1088 6597</p>
+                </div>
+                <div class="confirmacion-invitacion">
+                    <h3>¡No puedes faltar!</h3>
+                    <p>Confirma antes del 15 de noviembre</p>
+                </div>
+            </div>
+        </section>
 
 
-    <!-- Sección de Confirmación y Formulario -->
-    <section id="confirmacion" class="section">
-        <h2>Confirma tu Asistencia</h2>
-        <p>Si deseas hacernos un regalo, puedes hacerlo a través de la siguiente cuenta bancaria. ¡Lo apreciamos muchísimo!</p>
-        <p><strong>Cuenta:</strong> ES93 0049 0223 6828 1088 6597</p>
-        <p>Por favor, confirma tu asistencia antes del 15 de noviembre.</p>
-        <!-- Aquí va el iframe de Google Forms -->
-        <div class="iframe-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScvGIL1JC3fsHL_ZOpoenPly4OvIcU2uaYkrNUQl-At3euEZw/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-        </div>
-    </section>
+        <!-- Sección de Confirmación y Formulario -->
+        <section id="confirmacion" class="section">
+            
+            <div class="iframe-container">
+                <iframe src="https://fm.addxt.com/form/?vf=1FAIpQLSehzRo5tS9JKzYHqpWKtkFVPHtVFWRIFE9XtnWLhdPl2A1vWw" width="100%" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
 
-    <!-- Sección de Preguntas Frecuentes (FAQ) -->
-    <section id="faq" class="section">
-        <h2>Preguntas Frecuentes</h2>
-        <ul>
-            <li><strong>¿Pueden ir niños?</strong><br> Sí, pueden asistir.</li>
-            <li><strong>¿Hay sitio para aparcar?</strong><br> Sí, hay un área de aparcamiento disponible.</li>
-            <li><strong>¿Toda la boda será en el mismo lugar?</strong><br> Sí, todo se llevará a cabo en Los Confites Organic Farm.</li>
-        </ul>
-    </section>
+        
+        
+    </div>
+    
 
     <footer>
         <p>¡Estamos deseando compartir este día con vosotros!</p>

@@ -1,0 +1,852 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f6ede7;
+    padding-top: 80px; /* Espacio para que el contenido no quede detrás de la barra de navegación */
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #fff;
+    border-bottom: 2px solid #dcdcdc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.page-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    color: #555;
+    margin-right: auto;
+}
+
+/* Enlaces del menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #a07455;
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 80px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #8E7CC3;
+}
+
+/* Sección de introducción */
+#intro {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+#intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("flores-intro.png");
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 100%;
+    margin-left: 2rem;
+}
+
+.intro-text h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+    line-height: 1.2;
+    color: #3a5d4a;
+    margin: 0;
+}
+
+/* Subtítulo en la introducción */
+.intro-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-style: italic;
+    color: #3a5d4a;
+    margin-top: 10px;
+}
+
+/* Botón de confirmación */
+.confirm-button {
+    position: absolute;
+    bottom: 6rem;
+    right: 4rem;
+    background-color: #e27d60;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.confirm-button:hover {
+    background-color: #d46b50;
+}
+
+/* Sección de bienvenida */
+#bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f6ede7;
+}
+
+.bienvenida-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    text-align: left;
+    gap: 40px;
+}
+
+/* Imagen de bienvenida */
+.bienvenida-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Texto en bienvenida */
+.bienvenida-text {
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    max-width: 600px;
+}
+
+/* Encabezado en cursiva */
+.greeting {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #3a5d4a;
+    margin-bottom: 1rem;
+}
+
+/* Estilo del mensaje */
+.message {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #e27d60;
+}
+
+/* Estilo de énfasis en mensaje */
+.message em {
+    font-style: italic;
+}
+
+.message strong {
+    color: #e27d60;
+    font-weight: bold;
+}
+
+/* Sección de información */
+#informacion {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f6ede7;
+    position: relative;
+    z-index: 0;
+}
+
+/* Imagen de fondo alineada a la izquierda */
+.informacion-image {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    opacity: 0.15; /* Aplica una opacidad similar a la de "bienvenida" */
+    z-index: -1;
+}
+
+.informacion-image img{
+    height: auto;
+}
+
+.mapa-container iframe, .bienvenida-image img {
+    position: relative;
+    z-index: 3; /* Mantiene otros elementos por encima de la imagen de fondo */
+}
+
+/* Contenido de texto en la sección de información */
+.informacion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+    margin-left: 45%; /* Deja espacio para la imagen a la izquierda */
+    text-align: left;
+    max-width: 50%;
+    z-index: 2; /* Asegura que el texto esté encima de la imagen */
+}
+
+/* Título en la sección de información */
+.informacion-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #3a5d4a;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+/* Estilo de los párrafos en la sección de información */
+.informacion-content p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Subtítulo en cursiva */
+.subtitulo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #3a5d4a;
+    font-style: italic;
+}
+
+/* Estilo de fecha y ubicación */
+.fecha, .ubicacion {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #e27d60;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Contenedor del mapa */
+.mapa-container {
+    padding: 1rem; /* Ajusta el valor de padding según tus preferencias */
+    background-color: #f6ede7; /* Color de fondo para el contenedor (opcional) */
+    border-radius: 10px; /* Bordes redondeados para una apariencia estética */
+    overflow: hidden; /* Asegura que el iframe no sobresalga de los bordes */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+    margin-top: 20px; /* Espacio superior para separarlo del contenido anterior */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+}
+
+/* Iframe del mapa */
+.mapa-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados para el iframe */
+}
+
+.abrir-maps{
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+/* Estilo para la sección Itinerario */
+#itinerario {
+    background-color: #3e7766; /* Fondo verde */
+    color: #ffffff; /* Texto blanco */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem;
+    text-align: center;
+}
+
+/* Estilo para el título */
+#itinerario h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+/* Estilo para los elementos de texto */
+#itinerario p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 1.2rem 0;
+    color: #ffffff;
+}
+
+#itinerario p strong {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+/* Estilo para la sección de Alojamiento */
+#alojamiento {
+    background-color: #f6ede7;
+    padding: 3rem 2rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #3a5d4a;
+}
+
+/* Título principal */
+#alojamiento h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #3a5d4a;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo del párrafo inicial */
+#alojamiento p {
+    font-size: 1.3rem;
+    color: #3a5d4a;
+    line-height: 1.6;
+    margin: 0 auto 1.5rem auto;
+    max-width: 600px;
+}
+
+/* Subrayado en "asistiréis allí a una boda" */
+.boda-subrayado {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+    color: #3a5d4a;
+}
+
+/* Lista de opciones de alojamiento */
+.alojamiento-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem auto;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3a5d4a;
+    line-height: 2;
+}
+
+/* Estilo para los enlaces de la lista */
+.alojamiento-list li a {
+    color: #3a5d4a;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.alojamiento-list li a:hover {
+    color: #8E7CC3;
+    text-decoration: underline;
+}
+
+/* Ajustes para el texto final */
+#alojamiento p:last-of-type {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #e27d60;
+    margin-top: 2rem;
+}
+
+/* Estilos generales para la sección FAQ */
+#faq {
+    background-color: #f6ede7;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #3a5d4a;
+}
+
+#faq h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #3a5d4a;
+    margin-bottom: 30px;
+}
+
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+}
+
+.faq-item strong {
+    font-size: 1.6rem;
+    color: #3a5d4a;
+}
+
+.faq-answer {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilos específicos para enlaces */
+#faq a {
+    color: #3a5d4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#faq a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    #faq h2 {
+        font-size: 2.5rem;
+    }
+
+    .faq-content {
+        padding: 0 10px;
+    }
+
+    .faq-item strong {
+        font-size: 1.4rem;
+    }
+
+    .faq-answer {
+        font-size: 1.1rem;
+    }
+}
+
+/* Sección de Confirmación y Cuenta Bancaria */
+#confirmacion-detalle {
+    background-color: #3e7766;
+    color: #f6ede7;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.detalle-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.detalle-texto {
+    width: 60%;
+    text-align: center;
+}
+
+.detalle-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.cuenta {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #f6ede7;
+}
+
+.confirmacion-invitacion {
+    text-align: center;
+    width: 35%;
+}
+
+.confirmacion-invitacion h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.confirmacion-invitacion p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.confirm-button {
+    display: inline-block;
+    background-color: #e27d60;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.confirm-button:hover {
+    background-color: #d46b50;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    #confirmacion-detalle {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .detalle-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-texto,
+    .confirmacion-invitacion {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cuenta {
+        font-size: 1.4rem;
+    }
+
+    .confirmacion-invitacion h3 {
+        font-size: 2rem;
+    }
+}
+
+#confirmacion-formulario {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #3e7766;
+    color: #fff;
+}
+
+#confirmacion-formulario h2, #confirmacion-formulario h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+form input[type="radio"] + label {
+    font-size: 1rem;  /* Ajusta el tamaño del texto de las opciones */
+    margin-left: 10px;  /* Da espacio entre el radio y el texto */
+}
+
+/* Ajustar el tamaño del texto debajo de las opciones */
+form input[type="radio"]:checked + label {
+    font-size: 0.9rem;  /* Cambia el tamaño del texto cuando una opción está seleccionada */
+}
+
+/* Si tienes listas ul o li para las opciones */
+form ul li {
+    font-size: 0.5rem; /* Aumenta o disminuye según lo necesites */
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    width: 100%; /* Hace que el campo de texto ocupe todo el ancho del contenedor */
+    padding: 10px; /* Añade algo de espacio dentro del campo */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total del campo */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    border: 1px solid #ccc; /* Ajusta el borde si es necesario */
+    border-radius: 5px; /* Estilo del borde, opcional */
+}
+
+/* Para los campos textarea */
+textarea {
+    width: 100%; /* Hace que el textarea ocupe todo el ancho del contenedor */
+    padding: 10px; /* Añade espacio dentro del campo */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total del campo */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    border: 1px solid #ccc; /* Ajusta el borde si es necesario */
+    border-radius: 5px; /* Estilo del borde, opcional */
+}
+
+.pregunta {
+    margin-bottom: 2rem;  /* Espacio entre las preguntas */
+}
+
+
+
+button {
+    background-color: #e27d60;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Listas de texto */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+ul li strong {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #a07455;
+}
+
+/* Contenedor para el mapa */
+.mapa-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f4f1;
+    color: #777;
+    font-size: 1rem;
+}
+.menu-icon, .close-icon {
+    display: none; /* Oculta en el modo escritorio por defecto */
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+    .intro-content, .informacion-content, .bienvenida-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .menu-icon {
+        display: block; /* Muestra el ícono de hamburguesa en dispositivos móviles */
+        color: #a07455;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .close-icon {
+        display: block; /* Muestra el ícono de cerrar en dispositivos móviles */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2.5rem;
+        color: #a07455;
+        cursor: pointer;
+    }
+
+    #intro {
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    /* Ajuste del contenedor principal */
+    .intro-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+        padding: 0;
+        margin: 0 auto; /* Centra el contenedor */
+    }
+
+    .intro-text {
+        margin: 0; /* Elimina cualquier margen adicional */
+        padding: 0;
+        text-align: center; /* Asegura que el texto esté centrado */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+    
+    .intro-text h1, .intro-text p {
+        margin: 0; /* Elimina márgenes de los elementos de texto */
+        padding: 0;
+    }
+
+
+    /* Posicionamiento del botón */
+    .confirm-button {
+        position: absolute;
+        bottom: 1rem; /* Coloca el botón más cerca del borde inferior */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0.6em 1.2em;
+        font-size: 1rem;
+        background-color: #e27d60;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        min-width: max-content;
+        white-space: nowrap;
+    }
+
+    .informacion-image {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%; /* Reduce el tamaño de la imagen en móviles */
+        opacity: 0.2; /* Ajusta la opacidad para que sea más sutil en pantallas pequeñas */
+        z-index: 1;
+    }
+
+    .informacion-image img{
+        width: 100%;
+    }
+
+    /* Ajuste del contenido en versión móvil */
+    .informacion-content {
+        max-width: 90%;
+        padding: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .informacion-content h2 {
+        font-size: 2rem; /* Ajusta el tamaño del título para móviles */
+    }
+
+    .informacion-content p {
+        font-size: 1.2rem;
+    }
+
+    .mapa-container iframe {
+        width: 100%;
+        height: 200px; /* Ajusta la altura del mapa en móviles */
+    }
+    
+    #itinerario h2 {
+        font-size: 2.5rem;
+    }
+
+    #itinerario p {
+        font-size: 1.3rem;
+    }
+
+    /* Ajuste de menú en móvil */
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    /* Ajuste de bienvenida */
+    .bienvenida-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bienvenida-image img {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    /* Ajuste del mapa en móviles */
+    .mapa-container iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
