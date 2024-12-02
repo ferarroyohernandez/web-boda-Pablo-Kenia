@@ -90,7 +90,6 @@ nav ul li a:hover {
     background-position: right center;
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.3;
     z-index: 1;
 }
 
@@ -108,7 +107,7 @@ nav ul li a:hover {
 }
 
 .intro-text h1 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Cedarville Cursive', cursive;
     font-size: 6rem;
     line-height: 1.2;
     color: #3a5d4a;
@@ -117,7 +116,7 @@ nav ul li a:hover {
 
 /* Subtítulo en la introducción */
 .intro-text p {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cedarville Cursive', cursive;
     font-size: 2rem;
     font-style: italic;
     color: #3a5d4a;
@@ -171,13 +170,13 @@ nav ul li a:hover {
 /* Texto en bienvenida */
 .bienvenida-text {
     font-family: 'Playfair Display', serif;
-    color: #333;
+    color: #e27d60;
     max-width: 600px;
 }
 
 /* Encabezado en cursiva */
 .greeting {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-size: 2rem;
     color: #3a5d4a;
     margin-bottom: 1rem;
@@ -220,7 +219,7 @@ nav ul li a:hover {
     transform: translateY(-50%);
     width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
     height: auto;
-    opacity: 0.15; /* Aplica una opacidad similar a la de "bienvenida" */
+    opacity: 1; /* Aplica una opacidad similar a la de "bienvenida" */
     z-index: -1;
 }
 
@@ -263,7 +262,7 @@ nav ul li a:hover {
 
 /* Subtítulo en cursiva */
 .subtitulo {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-size: 1.5rem;
     color: #3a5d4a;
     font-style: italic;
@@ -317,7 +316,7 @@ nav ul li a:hover {
 
 /* Estilo para el título */
 #itinerario h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-size: 3rem;
     color: #ffffff;
     margin-bottom: 2rem;
@@ -350,7 +349,7 @@ nav ul li a:hover {
 
 /* Título principal */
 #alojamiento h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-size: 3rem;
     color: #3a5d4a;
     margin-bottom: 1.5rem;
@@ -407,14 +406,16 @@ nav ul li a:hover {
 /* Estilos generales para la sección FAQ */
 #faq {
     background-color: #f6ede7;
-    padding: 60px 20px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
     text-align: center;
     font-family: 'Playfair Display', serif;
     color: #3a5d4a;
 }
 
 #faq h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Reenie Beanie', cursive;
     font-size: 3rem;
     color: #3a5d4a;
     margin-bottom: 30px;
@@ -443,6 +444,25 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
+/* Contenedor de la imagen al final del FAQ */
+.faq-image {
+    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    margin: 0; /* Elimina márgenes del contenedor */
+    padding: 0; /* Elimina padding del contenedor */
+    overflow: hidden; /* Asegura que no haya desbordamientos */
+    position: relative; /* Se asegura de que esté dentro del flujo normal */
+}
+
+/* Imagen dentro del contenedor */
+.faq-image img {
+    width: 100vw; /* Forzar a que ocupe todo el ancho de la ventana */
+    height: auto; /* Mantiene las proporciones */
+    margin: 0; /* Elimina márgenes de la imagen */
+    padding: 0; /* Elimina cualquier padding */
+    display: block; /* Asegura que sea un bloque */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    position: relative; /* Se asegura de que respete el flujo del documento */
+}
 /* Estilos específicos para enlaces */
 #faq a {
     color: #3a5d4a;
@@ -472,6 +492,8 @@ nav ul li a:hover {
         font-size: 1.1rem;
     }
 }
+
+
 
 /* Sección de Confirmación y Cuenta Bancaria */
 #confirmacion-detalle {
@@ -504,7 +526,7 @@ nav ul li a:hover {
 }
 
 .cuenta {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Playfair Display';
     font-size: 1.6rem;
     font-weight: bold;
     color: #f6ede7;
@@ -516,7 +538,7 @@ nav ul li a:hover {
 }
 
 .confirmacion-invitacion h3 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Cedarville Cursive', cursive;
     font-size: 2.5rem;
     margin: 0;
 }
@@ -578,7 +600,7 @@ nav ul li a:hover {
 }
 
 #confirmacion-formulario h2, #confirmacion-formulario h3 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     text-align: center;
     color: #fff;
@@ -713,24 +735,36 @@ footer {
     }
 
     #intro {
-        min-height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    /* Ajuste del contenedor principal */
-    .intro-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        max-width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+        position: relative;
+        min-height: calc(100vh - 80px); /* Altura total menos la barra de navegación */
+        margin: 0;
         padding: 0;
-        margin: 0 auto; /* Centra el contenedor */
+        overflow: hidden; /* Asegura que no haya desbordamientos */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #intro::before {
+        content: "";
+        position: absolute;
+        top: 0; /* Empieza exactamente desde el borde superior */
+        left: 0;
+        width: 100%; /* Ajusta el ancho de la ventana */
+        height: calc(100%); /* La altura completa del contenedor */
+        background-image: url("flores-intro-movil.png");
+        background-repeat: no-repeat;
+        background-position: top; /* Alinea la imagen al borde superior */
+        background-size: contain; /* Mantiene proporciones sin recortar */
+        z-index: -1; /* Envía la imagen detrás del contenido */
+    }
+    
+    
+    .intro-content {
+        position: relative;
+        z-index: 1; /* Asegura que el texto quede por encima de la imagen */
+        text-align: center;
+        padding: 1rem; /* Espaciado interno */
     }
 
     .intro-text {
@@ -763,13 +797,7 @@ footer {
     }
 
     .informacion-image {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 70%; /* Reduce el tamaño de la imagen en móviles */
-        opacity: 0.2; /* Ajusta la opacidad para que sea más sutil en pantallas pequeñas */
-        z-index: 1;
+        display: none;
     }
 
     .informacion-image img{
