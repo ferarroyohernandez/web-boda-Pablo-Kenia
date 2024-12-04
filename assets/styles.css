@@ -319,9 +319,9 @@ nav ul li a:hover {
     font-family: 'Reenie Beanie', cursive;
     font-size: 3rem;
     color: #ffffff;
-    margin-bottom: 2rem;
-    font-weight: normal;
+    margin-bottom: 1.5rem;
 }
+
 
 /* Estilo para los elementos de texto */
 #itinerario p {
