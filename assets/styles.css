@@ -263,7 +263,7 @@ nav ul li a:hover {
 /* Subtítulo en cursiva */
 .subtitulo {
     font-family: 'Reenie Beanie', cursive;
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: #3a5d4a;
     font-style: italic;
 }
@@ -424,7 +424,7 @@ nav ul li a:hover {
 .faq-content {
     max-width: 800px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 .faq-item {
@@ -530,6 +530,9 @@ nav ul li a:hover {
     font-size: 1.6rem;
     font-weight: bold;
     color: #f6ede7;
+    -webkit-user-modify: none; /* Previene la detección automática */
+    -webkit-touch-callout: none; /* Evita acciones como llamar o copiar */
+    text-decoration: none; /* Elimina el estilo de enlace */
 }
 
 .confirmacion-invitacion {
@@ -537,7 +540,7 @@ nav ul li a:hover {
     width: 35%;
 }
 
-.confirmacion-invitacion h3 {
+.confirmacion-invitacion h2 {
     font-family: 'Cedarville Cursive', cursive;
     font-size: 2.5rem;
     margin: 0;
