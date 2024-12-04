@@ -446,7 +446,7 @@ nav ul li a:hover {
 
 /* Contenedor de la imagen al final del FAQ */
 .faq-image {
-    width: 100vw; /* Ocupa todo el ancho de la ventana */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
     margin: 0; /* Elimina márgenes del contenedor */
     padding: 0; /* Elimina padding del contenedor */
     overflow: hidden; /* Asegura que no haya desbordamientos */
