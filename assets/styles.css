@@ -172,6 +172,7 @@ nav ul li a:hover {
     font-family: 'Playfair Display', serif;
     color: #e27d60;
     max-width: 600px;
+    font-size: 18px;
 }
 
 /* Encabezado en cursiva */
@@ -320,7 +321,7 @@ p.carteles-text{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 6rem;
+    padding: 96px 20px;
     text-align: center;
 }
 
@@ -408,7 +409,6 @@ p.carteles-text{
 /* Ajustes para el texto final */
 #alojamiento p:last-of-type {
     font-size: 1.1rem;
-    font-style: italic;
     color: #e27d60;
     margin-top: 2rem;
 }
