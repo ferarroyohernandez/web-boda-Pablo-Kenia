@@ -260,13 +260,24 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+p.carteles-text{
+    font-family: 'Playfair Display', serif;
+    color: #e27d60;
+    font-size: 16px  !important;
+    line-height: 1.6;
+    text-align: center; /* Opcional: centra el texto */
+}
+
 /* Subtítulo en cursiva */
 .subtitulo {
     font-family: 'Reenie Beanie', cursive;
     font-size: 3rem;
     color: #3a5d4a;
     font-style: italic;
+    
 }
+
+
 
 /* Estilo de fecha y ubicación */
 .fecha, .ubicacion {
@@ -284,7 +295,6 @@ nav ul li a:hover {
     border-radius: 10px; /* Bordes redondeados para una apariencia estética */
     overflow: hidden; /* Asegura que el iframe no sobresalga de los bordes */
     max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
-    margin-top: 20px; /* Espacio superior para separarlo del contenido anterior */
     box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
 }
 
@@ -770,7 +780,7 @@ footer {
     }
 
     .intro-text {
-        margin: 0; /* Elimina cualquier margen adicional */
+        margin: 0 auto; /* Elimina cualquier margen adicional */
         padding: 0;
         text-align: center; /* Asegura que el texto esté centrado */
         width: 100%; /* Asegura que ocupe todo el ancho disponible */
@@ -780,12 +790,23 @@ footer {
         margin: 0; /* Elimina márgenes de los elementos de texto */
         padding: 0;
     }
+    
+    .intro-text p {
+        white-space: nowrap; /* Mantén el texto en una sola línea */
+        font-size: 1.5rem; /* Tamaño ajustado */
+        margin: 0 auto; /* Centra horizontalmente */
+        text-align: center; /* Centra el contenido del texto */
+        display: inline-block; /* Ajusta el ancho solo al contenido */
+        width: auto; /* No limite el ancho */
+    }
+    
+    
 
 
     /* Posicionamiento del botón */
     .confirm-button {
         position: absolute;
-        bottom: 1rem; /* Coloca el botón más cerca del borde inferior */
+        bottom: 4rem; /* Coloca el botón más cerca del borde inferior */
         left: 50%;
         transform: translateX(-50%);
         padding: 0.6em 1.2em;
