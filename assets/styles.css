@@ -450,7 +450,6 @@ p.carteles-text{
 .faq-answer {
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #333;
     display: block;
     margin-top: 10px;
 }
@@ -552,9 +551,11 @@ p.carteles-text{
 }
 
 .confirmacion-invitacion h2 {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    text-align: center; /* Centra el texto */
+    font-size: 2rem; /* Ajusta el tamaño según sea necesario */
+    margin: 0 auto; /* Centra el texto en su contenedor */
     font-family: 'Cedarville Cursive', cursive;
-    font-size: 2.5rem;
-    margin: 0;
 }
 
 .confirmacion-invitacion p {
